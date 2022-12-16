@@ -1,0 +1,47 @@
+<div class="header">
+  <div class="title-name">~シフト管理~</div>
+    <ul class="lists-right">
+      <% if user_signed_in? %>
+        <li class = "user-number">No:<%= current_user.number %></li>
+        <li class = "user-name"><%= current_user.name %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+    </ul>
+</div>
+<div class="main">
+  <%# 今日のシフト部分 %>
+  <div class="today-shift">
+    <div class="today-text">
+      今日の出勤予定<br />
+    </div>
+    <% if user_signed_in? %>
+      <%# if 今日の日付と同じ日のシフトがあれば %>
+        <div class="today-time">
+          <%= "○:00 - □:00" %>
+        </div>
+      <%# else %>
+        <div class="today-rest">
+          
+        </div>
+      <%# end %>
+    <% else %>
+      <div class="logout-text">
+        ログイン時のみ表示
+      </div>
+    <% end %>
+  </div>
+
+  <%# ボタン部分 %>
+  <div class = "botton-area">
+    <div class="botton-ul">
+      <ul class = "botton-list">
+          <li class="botton-form"><%= link_to 'シフト提出', "#", class:"botton" %>
+          <li class="botton-form"><%= link_to 'シフト再提出', "#", class:"botton" %>
+          <li class="botton-form"><%= link_to '合計勤務時間', "#", class:"botton" %>
+      </ul>
+    </div>
+  </div>
+</div>
