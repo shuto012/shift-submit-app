@@ -1,19 +1,23 @@
 .top{
-  font-size: 60px;
+  font-size: 30px;
   background-color: rgb(48, 27, 1);
   font-family: "SimSun";
-  height: 100px;
 }
 
+.main{
+  background-color: lightgoldenrodyellow;
+}
 h1{
   margin:auto;
   color: white;
 }
 
 
-.registration-main{
+.session-main{
   background-color: lightgoldenrodyellow;
   font-size: 30px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .form-area{
