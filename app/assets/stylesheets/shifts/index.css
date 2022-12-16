@@ -1,3 +1,7 @@
+.main{
+  background-color: lightgoldenrodyellow;
+}
+/* ヘッダー */
 .header{
   font-size: 60px;
   background-color: rgb(48, 27, 1);
@@ -63,5 +67,52 @@
   border: 1px solid white;
   padding: 10px;
   margin: 0px 0px 0px 10px;
+}
 
+/* 今日のシフト */
+.today-shift{
+  width: 30vw;
+  height: 40vh;
+  border: 10px solid white;
+}
+
+.today-text{
+  font-size: 30px;
+  padding: 10px 0px 0px 90px;
+}
+
+.today-time{
+  font-size: 50px;
+  padding: 10px 0px 0px 62px;
+}
+/* シフト提出機能設定後調整 */
+.today-rest{
+  font-size: 40px;
+  padding: 0px 0px 0px 80px;
+}
+
+.logout-text{
+  font-size: 40px;
+  padding: 80px 0px 0px 40px;
+}
+
+/* ボタン部分 */
+.botton-area{
+  width: 30vw;
+  height: 60vh;
+  border: 10px solid white;
+}
+
+.botton{
+  text-decoration: none;
+  width: 100%;
+  background-color: rgb(48, 27, 1);
+  color: white;
+  line-height: 48px;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 20px;
+}
+.botton-form{
+  margin: 50px 0px 30px 50px;
 }
