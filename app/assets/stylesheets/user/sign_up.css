@@ -1,0 +1,49 @@
+.top{
+  font-size: 60px;
+  background-color: rgb(48, 27, 1);
+  font-family: "SimSun";
+  height: 100px;
+}
+
+h1{
+  margin:auto;
+  color: white;
+}
+
+
+.registration-main{
+  background-color: lightgoldenrodyellow;
+  font-size: 30px;
+}
+
+.form-area{
+  padding: 10px;
+}
+.field{
+  background-color: white;
+  ;width: 500px;
+  padding: 10px;
+  margin: 10px 450px 10px;
+
+
+}
+.input-field{
+  width: 400px;
+  height: 50px;
+  font-size: 30px;
+
+}
+.submit-area{
+  width: 200px;
+  height:100px;
+  margin:auto;
+}
+
+.submit-botton{
+  width: 100%;
+  background-color: rgb(39, 109, 39);
+  color: #fff;
+  line-height: 48px;
+  font-size: 30px;
+  cursor: pointer;
+}

@@ -29,7 +29,7 @@ https://docs.google.com/spreadsheets/d/1ARhA8swFtmjjV-4SiFulrncpOiGHK_GC-YMno7H9
 # 実装予定の機能
 現在、ユーザー管理機能実装中
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/221b720db4f3fdcdc5a6eea927a88e50.png)](https://gyazo.com/221b720db4f3fdcdc5a6eea927a88e50)
+[![Image from Gyazo](https://i.gyazo.com/16e11e6df01a91859aa886a494cf38fd.png)](https://gyazo.com/16e11e6df01a91859aa886a494cf38fd)
 
 # 画面遷移図
 [![Image from Gyazo](https://i.gyazo.com/3152537f0dfd7d861b8a44c0688a2abd.png)](https://gyazo.com/3152537f0dfd7d861b8a44c0688a2abd)
@@ -42,3 +42,44 @@ https://docs.google.com/spreadsheets/d/1ARhA8swFtmjjV-4SiFulrncpOiGHK_GC-YMno7H9
 
 # 工夫したポイント
 完成後記載
+
+
+
+
+# テーブル設計
+
+## users テーブル
+
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| name               | string  | null: false               |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
+| number             | integer | null: false               |
+
+### Association
+- has_many :working-days
+
+## working-days テーブル
+
+| Column             | Type       | Options                       |
+| ------------------ | ---------- | ----------------------------- |
+| month              | date       | null: false                   |
+| date               | date       | null: false                   |
+| user               | references | null: false, foreign_key :true|
+
+### Association
+- has_one :working-time
+- belongs_to :user
+
+## working-times テーブル
+
+| Column             | Type    | Options                           |
+| ------------------ | ------- | --------------------------------- |
+| start_time         | time    | null: false                       |
+| last_time          | time    | null: false                       |
+| comment            | string  |                                   |
+| working-day        | references | null: false, foreign_key :true |
+
+### Association
+- belongs_to :working-day
