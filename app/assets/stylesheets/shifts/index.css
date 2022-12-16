@@ -1,0 +1,67 @@
+.header{
+  font-size: 60px;
+  background-color: rgb(48, 27, 1);
+  font-family: "SimSun";
+  height: 100px;
+  display: flex;
+  text-decoration: none;
+}
+
+.title-name{
+  color: white;
+  justify-content: center;
+  align-items: left;
+}
+
+.lists-right{
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  padding: 25px;
+  margin: 0px 0px 0px 305px;
+
+}
+
+.user-number{
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: white;
+}
+
+.user-name{
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: white;
+}
+
+.logout {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+
+
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  margin: 0px 0px 0px 200px;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  margin: 0px 0px 0px 10px;
+
+}
