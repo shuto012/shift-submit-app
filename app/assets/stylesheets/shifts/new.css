@@ -1,0 +1,64 @@
+/* 仮 */
+.top{
+  font-size: 60px;
+  background-color: rgb(48, 27, 1);
+  font-family: "SimSun";
+  height: 100px;
+}
+
+.main{
+  display: flex;
+}
+.form-area{
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: sans-serif;
+  margin: 0px 10px 0px 0px;
+
+}
+
+.month-text{
+  color: black;
+  font-size: 30px;
+}
+
+.times-area{
+  display: flex;
+}
+.form-box{
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px 0px 0px 30px ;
+}
+.comment-area{
+  display: flex;
+  padding: 10px;
+}
+.comment{
+  width: 80%;
+  height: 100px;
+
+}
+.worktime-area{
+  background-color: antiquewhite;
+  width: 100vw;
+}
+.workingtime{
+  background-color: white;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: sans-serif;
+  width: 400px;
+  height: 50px;
+  border: 1px solid black;
+  margin: 10px 10px 20px 100px;
+  padding: 10px 0px 0px 30px ;
+}
+.workingtime-month{
+
+}
