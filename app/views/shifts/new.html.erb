@@ -11,33 +11,31 @@
 
 
   <div class='main'>
-    
     <div class='form-area'>
-      <%= form_with model: @shift, url: shifts_path, class: 'form' do |f| %>
-        <h1 class="month-text"><%= "1" %>月分シフト</h1>
-        <% 31.times do |day| %>
-          <div class='times-area'>
-            <div class='form-box'>
-              <%= 1 %>月<%= day + 1 %>日　(○曜日)
+      <%= form_with model: @shift, url: shifts_path, method: :post, class: 'form' do |f| %>
+          <h1 class="month-text"><%= "1" %>月分シフト</h1>
+          <% 31.times do |day| %>
+            <div class='times-area'>
+              <div class='form-box'>
+                <%= 1 %>月<%= day + 1 %>日　(○曜日)
+              </div>
+              <div class='form-box'>
+                <%= f.label :出勤時間, class: 'label' %>   
+                <%= i.time_field :start_time, class: 'time-form' %>
+              </div>
+              <div class='form-box'>
+                <%= f.label :退勤時間, class: 'label' %>
+                <%= i.time_field :finish_time, class: 'time-form' %>
+              </div>
             </div>
-            <div class='form-box'>
-              <%= f.label :出勤時間, class: 'label' %>   
-              <%= f.time_field :start_time, class: 'time-form' %>
-            </div>
-            <div class='form-box'>
-              <%= f.label :退勤時間, class: 'label' %>
-              <%= f.time_field :finish_time, class: 'time-form' %>
-            </div>
+          <% end %>
+          <div class='comment-area'>
+            <%= f.label :コメント, class: 'label'%>
+            <%= i.text_field :comment, placeholder: "その他要望など", class: 'comment' %>
           </div>
-        <% end %>
-        <div class='comment-area'>
-          <%= f.label :コメント, class: 'label'%>
-          <%= f.text_field :comment, placeholder: "その他要望など", class: 'comment' %>
-        </div>
-        <div class='submit-form'>
-          <%= f.submit :提出する, class: 'submit-' %>
-        </div>
+          <div class='submit-form'>
+            <%= f.submit :提出する, class: 'submit-' %>
+          </div>
       <% end %>
-
     </div>
   </div>
