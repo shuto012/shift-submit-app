@@ -21,11 +21,11 @@
               </div>
               <div class='form-box'>
                 <%= f.label :出勤時間, class: 'label' %>   
-                <%= i.time_field :start_time, class: 'time-form' %>
+                <%= f.time_field :start_time, class: 'time-form' %>
               </div>
               <div class='form-box'>
                 <%= f.label :退勤時間, class: 'label' %>
-                <%= i.time_field :finish_time, class: 'time-form' %>
+                <%= f.time_field :finish_time, class: 'time-form' %>
               </div>
             </div>
           <% end %>
@@ -34,7 +34,7 @@
             <%= i.text_field :comment, placeholder: "その他要望など", class: 'comment' %>
           </div>
           <div class='submit-form'>
-            <%= f.submit :提出する, class: 'submit-' %>
+            <%= f.submit :提出する, class: 'submit-button' %>
           </div>
       <% end %>
     </div>
