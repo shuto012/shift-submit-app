@@ -1,5 +1,5 @@
 <div class="top">
-  <h1>~ログイン~</h1>
+  <h1><%= link_to'~ログイン~', root_path, class:"top-text" %></h1>
 </div>
 
 <div class="main">
@@ -20,7 +20,7 @@
         </div>
 
         <div class="submit-area" >
-          <%= f.submit "ログイン", class:"submit-botton" %>
+          <%= f.submit "ログイン", class:"submit-button" %>
         </div>
       </div>
      <% end %>

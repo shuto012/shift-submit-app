@@ -37,11 +37,15 @@
   <%# ボタン部分 %>
   <div class = "botton-area">
     <div class="botton-ul">
-      <ul class = "botton-list">
-          <li class="botton-form"><%= link_to 'シフト提出', "#", class:"botton" %>
+      <% if user_signed_in? %>
+        <ul class = "botton-list">
+          <li class="botton-form"><%= link_to 'シフト提出', new_shift_path, class:"botton" %>
           <li class="botton-form"><%= link_to 'シフト再提出', "#", class:"botton" %>
           <li class="botton-form"><%= link_to '合計勤務時間', "#", class:"botton" %>
-      </ul>
+        </ul>
+      <% else %>
+       <div></div>
+      <% end %>
     </div>
   </div>
 </div>
